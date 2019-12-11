@@ -192,7 +192,7 @@ def splitseqs(infile):
 	openfile = list(SeqIO.parse(infile, "fasta"))
 	outlist = []
 	flen = len(openfile)
-	r = range(0, flen, 50)
+	r = list(range(0, flen, 50))
 	r.append(flen)
 	count = 1
 	for i in range(len(r)):
