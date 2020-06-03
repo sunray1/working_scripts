@@ -21,6 +21,10 @@ for record in records:
         accnum = accnum1.split("/")[0]
     except:
         accnum = accnum1
+    try:
+        accnum = accnum1.split("_")[-1]
+    except:
+        accnum = accnum1
     for iter in c.execute("SELECT tc_id, Species FROM blast WHERE accession = '" + str(accnum) + "'"):
         tc_id= iter[0]
         species = str(iter[1]).replace(" ", "_")
