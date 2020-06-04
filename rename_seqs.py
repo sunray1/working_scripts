@@ -22,7 +22,7 @@ for record in records:
     except:
         accnum = accnum1
     try:
-        accnum = accnum1.split("_")[-1]
+        accnum = accnum1.split("_R_")[-1]
     except:
         accnum = accnum1
     for iter in c.execute("SELECT tc_id, Species FROM blast WHERE accession = '" + str(accnum) + "'"):
