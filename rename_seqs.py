@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+
+#./rename_seqs fasta blast_results.db tax.db Order_Family_Species
+
 from Bio import SeqIO
 import sys, sqlite3
 
